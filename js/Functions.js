@@ -11,8 +11,11 @@ var x=function()
 
 window.onload=function()
 {
+
+    var loadTime=new Date;
     document.getElementById("btnTest").onclick=function()
     {
-        alert("Thanks for clicking the button");
+        var clickTime=new Date;
+        alert("Thanks for clicking the button loaded time"+loadTime+" clicked time"+clickTime);
     };
 };

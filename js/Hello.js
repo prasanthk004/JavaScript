@@ -8,13 +8,27 @@
  // alert("Hello World!");
   document.write("Hello World!");
   document.write("<br>"); 
+ document.write(b);
 
-  document.write(b);
-
-  function DisTime(thisDate)
+function DisTime(thisDate)
 {
+    var dd="Mmmd";
     document.write("Hello World!  time:   "+thisDate);
+    document.write("\n inside fun"+b);
+    document.write(dd);
+    dd="    ffdd ";
+    document.write(dd);
+
+
 } 
+
+
+document.write(dd);
+
+function help()
+{
+    document.write("Helping!");
+}
 
 
           
