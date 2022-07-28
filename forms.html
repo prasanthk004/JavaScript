@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Prasanth" />
+<meta name="Keywords" content="HTML , doctype" />
+<meta name="Description" content="This is  	HTML  hello  world document"/>
+    <title>Forms Sample</title>
+    <script>
+        function Reset()
+        {
+            if(confirm("Are u Sure to clear the form ?"))
+            document.getElementById("testform").Reset();
+        }
+    </script>
+</head>
+<body >
+    <form     id="testform"  >
+        <fieldset>
+            <legend>Input Form</legend>
+        <label for id="name">Name : </label>        
+        
+        <input id="name" type="text" name="name" width="100px"  maxlength="7" tabindex="2"/><br /><br>     
+        <label for id="pass">Password :  </label>      
+       <input id="pass" type="password" name="password" tabindex="1"/><br><br>     
+      
+        
+        <input id="m" type="radio" name="sex" value="Male"><label for id="m">Male</label>      
+        <input id="f" type="radio" name="sex" value="Female"><label for id="f">Fe-Male</label><br><br>
+    
+        <lable for id="review">Review : </lable>
+        <textarea id="review" name="test"  wrap="hard" rows="4" cols="55"  tabindex="5" readonly></textarea><br> 
+   
+        <label for id="time">Select the Course timing </label>
+        <select id="tmie">
+            <option value="1">Morning</option>
+            <option value="2">Evening</option>
+     
+        </select>
+  
+        <div >
+        Which mode want to enroll?
+        <input id ="on" type="radio" value="online" name="mode" disabled ><label for="on">Online</label>
+        <input id ="off" type="radio" value="offlibe" name="mode" ><label for="off">offline</label>
+    </div>
+    <label for id="list">Select the Course : </label>
+
+    <select multiple id="list" size="20" >
+        <option value="1" selected>C#</option>
+        <option value="2" selected>Core JAVA</option>
+        <option value="3">Advanced JAVA</option>
+        <option value="4">.Net</option>
+        <option value="5">GO</option>
+        <option value="6" selected>Salesforce Developer</option>
+        <option value="7" selected>Salesforce Admin</option>
+    </select>
+</fieldset>
+    <br>
+
+    <button type="Submit">Login</button> 
+    <input type="submit" value="Submit" accesskey="s" />
+     <button value="Reset" onclick="Reset()"> Reset</button>
+    <br><br>
+    Known basic languages : 
+    <input type="checkbox" id="c" value="C" name="lang" checked><label for id="c">C</label>
+    <input type="checkbox" id="cpp" value="C++" name="lang" checked><label for id="cpp">C++</label>
+    <input type="checkbox" id="css" value="CSS" name="lang" checked><label for id="css">CSS</label>
+    <input type="checkbox" id="h" value="HTML" name="lang"><label for id="h">HTML</label>
+    <input type="checkbox" id="j" value="js" name="lang"><label for id="j">JavaScript</label><br>
+    <br>
+
+    ChooseFile:<input type="file" name="uploadfile">
+
+
+       
+        
+        
+
+       
+        
+
+
+
+    </form>
+</body>
+</html>                                                                         

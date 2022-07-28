@@ -27,7 +27,8 @@ document.write(dd);
 
 function help()
 {
-    document.write("Helping!");
+document.getElementsByClassName("hl").innerHTM="helping"
+
 }
 
 

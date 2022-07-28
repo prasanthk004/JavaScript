@@ -1,7 +1,4 @@
-var Employee=(
-
-
-    function()
+var Employee=     function()
     {
 
         var name,age,salary;
@@ -23,7 +20,8 @@ var Employee=(
 
         
     }
-)();
+ 
+
 
      
     
