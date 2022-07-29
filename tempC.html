@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/tempC.js"></script>
+    <title>Temprature Conversion Chart (Client Side)</title>
+    <style>
+        #myTable{
+            border : solid 2px;
+            width: 400px;            
+            cellspacing:3px;
+            cellpadding:10px ;
+         }
+    </style>
+</head>
+<body>
+    <label for="from">From <sup>o</sup><b>C</b></label>
+    <input type="text" id="from" value="0.0">
+    
+    <label for="to">&nbsp; &nbsp;&nbsp;To<sup>o</sup><b>C</b></label>
+    <input type="text" id="to" value="0.0">
+    <button id="calc">Prepare Temp Chart</button>
+    <br><br>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,9 +1,11 @@
- 
+ var x=(function(){
 
-var x=
-function()
-{
-function Calculate()
+    function hello()
+    {
+        alert("Hello");
+    }
+
+    function SiCalculate()
 {
     let si,p,n,r;
 
@@ -19,9 +21,22 @@ function Calculate()
 
  }
 
- return{}
-}
+    return{
+        hello:hello,
+        SiCalculate:SiCalculate
+    }
 
+
+
+
+ })();
+ 
+ 
+ 
+
+
+
+ 
  
  
     
@@ -32,12 +47,14 @@ $(
 
     function()
     {
-       
+ 
         $("#calc").click(
             function()
             {
-               x.Calculate()
-             }
+               
+
+                x.SiCalculate();
+              }
         );
     }
 );
