@@ -36,10 +36,18 @@ var x=(function(){
 
         if(res)
         {
-            $("#result").html("Prasa found");
+
+        var c=document.createTextNode("prasa found");
+        $("#result").html("<br>" );
+
+         document.getElementById("result").appendChild(c);
+            
         }
         else{
-            $("#result").html("Prasa not found");
+            var c=document.createTextNode("prasa not found");
+            $("#result").html("<br>" );
+    
+             document.getElementById("result").appendChild(c);
 
         }
 
@@ -63,7 +71,7 @@ $(
     {
         $("#num").click(function(){
 
-            x.getMobileNo(/\d{10}/g);
+            x.getMobileNo(/\9\d{9}/g);
 
         });
 
@@ -72,6 +80,7 @@ $(
          
             x.findPrasa(/prasa/ig);
         })
+        
 
      }
 );
