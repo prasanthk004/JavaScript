@@ -20,7 +20,15 @@ var x=(function(){
 
             var res= patt.exec(intext);
        }
-       $("#result").html("Numbers found <br><br>"+out);
+       if(out.length>0)
+       {
+        $("#result").html("Numbers found <br><br>"+out);
+
+       }
+       else{
+        $("#result").html("Numbers not found with starting 9");
+
+       }
 
         
     
@@ -54,9 +62,19 @@ var x=(function(){
         
     }
 
+    function clear()
+    {
+        $("#tx").val("");
+        $("#result").html("");
+
+
+    }
+
     return{
            getMobileNo:getMobileNo,
-           findPrasa:findPrasa
+           findPrasa:findPrasa,
+           Clear:clear
+
     }
 
 })();
@@ -71,7 +89,7 @@ $(
     {
         $("#num").click(function(){
 
-            x.getMobileNo(/\9\d{9}/g);
+            x.getMobileNo(/\9\d{9}/gm);
 
         });
 
@@ -80,6 +98,16 @@ $(
          
             x.findPrasa(/prasa/ig);
         })
+
+        $("#clr").click(function()
+        {
+            x.Clear();
+
+        }
+        
+        )
+
+
         
 
      }
