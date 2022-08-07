@@ -48,7 +48,7 @@ var x=(function(){
         out=macthedArray.join("<br />")
 
         $("#result").html("");
-        setTimeout(2000);
+    //    setTimeout(20000);
         if(out.length>0)
         {
          $("#result").html("Numbers found <br><br>"+out);
@@ -89,6 +89,25 @@ var x=(function(){
         
     }
 
+    function findM(patt)
+    {
+        var intext=$("#tx").val();
+        var mArray=intext.match(patt) ; 
+        var out=mArray.join("<br />")
+
+        if(out.length>0||out!=null)
+        {
+         $("#result").html("M Words Found <br><br>"+out);
+ 
+        }
+        else{
+         $("#result").html("M Words not found  ");
+ 
+        }
+        
+
+    }
+
     function clear()
     {
         $("#tx").val("");
@@ -97,10 +116,13 @@ var x=(function(){
 
     }
 
+
+
     return{
            getMobileNo:getMobileNo,
            findPrasa:findPrasa,
            matchNum:matchNum,
+           findM:findM,
            Clear:clear
 
     }
@@ -130,7 +152,13 @@ $(
         $("#pr").click(function()
         {
          
-            x.findPrasa(/prasa/gi);
+            x.findPrasa(/prasa\s/gi);
+        })
+
+        $("#Mw").click(function(){
+
+            x.findM(/\s[a-z]*am[a-z]*/gmi);
+
         })
 
         $("#clr").click(function()
