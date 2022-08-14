@@ -93,9 +93,14 @@ var x=(function(){
     {
         var intext=$("#tx").val();
         var mArray=intext.match(patt) ; 
+ 
+        console.log(mArray);
+
         var out=mArray.join("<br />")
 
-        if(out.length>0||out!=null)
+        console.log(out);
+
+        if(out.length>0&&mArray!=null)
         {
          $("#result").html("M Words Found <br><br>"+out);
  
@@ -157,7 +162,7 @@ $(
 
         $("#Mw").click(function(){
 
-            x.findM(/\s[a-z]*am[a-z]*/gmi);
+            x.findM(/\s[a-z]*m[a-z]*/gmi);
 
         })
 
